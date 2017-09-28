@@ -15,13 +15,13 @@ var c=document.getElementById("myCanvas");
 var ctx=c.getContext("2d");
   
 // Create gradient
-var grd=ctx.createLinearGradient(0,0,200,0);
-// var grd=ctx.createLinearGradient(0,0,200,0);
-grd.addColorStop(0,"red");
+var grd=ctx.createLinearGradient(0,0,200,0);  //渐变（从左向右）
+// var grd=ctx.createRadialGradient(0,0,200,0);  //并用放射状/圆形渐变进行填充
+grd.addColorStop(0,"red");     // addColorStop()方法指定颜色停止，参数使用坐标来描述，可以是0至1。
 grd.addColorStop(1,"white");
 // Fill with gradient
 ctx.fillStyle=grd;
-ctx.fillRect(10,10,150,80);
+ctx.fillRect(10,10,150,80);  // 距离上：10px 左：10px width：150px  height：80px
 </script>
 
 </body>
